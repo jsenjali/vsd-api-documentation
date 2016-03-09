@@ -30,33 +30,33 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Attributes <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_acceptAllCertificates" href="#attr_acceptAllCertificates" class="fixed-text">acceptAllCertificates</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_authorizationEnabled" href="#attr_authorizationEnabled" class="fixed-text">authorizationEnabled</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_authorizingUserDN" href="#attr_authorizingUserDN" class="fixed-text">authorizingUserDN</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_certificate" href="#attr_certificate" class="fixed-text">certificate</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_enabled" href="#attr_enabled" class="fixed-text">enabled</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_groupDN" href="#attr_groupDN" class="fixed-text">groupDN</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_password" href="#attr_password" class="fixed-text">password</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_port" href="#attr_port" class="fixed-text">port</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_server" href="#attr_server" class="fixed-text">server</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_SSLEnabled" href="#attr_SSLEnabled" class="fixed-text">SSLEnabled</a></li>
                             
-                            <li><a data-id="attr_" href="#attr_" class="fixed-text"></a></li>
+                            <li><a data-id="attr_userDNTemplate" href="#attr_userDNTemplate" class="fixed-text">userDNTemplate</a></li>
                             
                         </ul>
                     </li>
@@ -97,7 +97,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="Accept all certificates from the LDAP server"></a>
+                            <a href="#attr_acceptAllCertificates" title="Accept all certificates from the LDAP server">acceptAllCertificates</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_boolean">boolean
@@ -123,7 +123,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="To enable LDAP authorization for an enterprise, both authorizationEnabled and enabled attributes must be set to true. If enabled attribute is not set, this attribute is ignored. The relationship between enabled and authorizationEnabled attributes is as follows, enabled = true, authorizationEnabled = false, LDAP is used only for Authentication. enabled = true, authorizationEnabled = true, LDAP is used for both authentication and authorization. enabled = false, authorizationEnabled = true, LDAP is not used. enabled = false, authorizationEnabled = false, LDAP is not used."></a>
+                            <a href="#attr_authorizationEnabled" title="To enable LDAP authorization for an enterprise, both authorizationEnabled and enabled attributes must be set to true. If enabled attribute is not set, this attribute is ignored. The relationship between enabled and authorizationEnabled attributes is as follows, enabled = true, authorizationEnabled = false, LDAP is used only for Authentication. enabled = true, authorizationEnabled = true, LDAP is used for both authentication and authorization. enabled = false, authorizationEnabled = true, LDAP is not used. enabled = false, authorizationEnabled = false, LDAP is not used.">authorizationEnabled</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_boolean">boolean
@@ -151,7 +151,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="This attribute is a mandatory field for LDAP authorization. When LDAP is used for authorization for an enterprise, the user DN that will be used to verify the integrity of groups and users in LDAP server for the enterprise. For example, CN=groupAdmin,OU=VSD_USERS,OU=Personal,OU=Domain Users,DC=company,DC=com"></a>
+                            <a href="#attr_authorizingUserDN" title="This attribute is a mandatory field for LDAP authorization. When LDAP is used for authorization for an enterprise, the user DN that will be used to verify the integrity of groups and users in LDAP server for the enterprise. For example, CN=groupAdmin,OU=VSD_USERS,OU=Personal,OU=Domain Users,DC=company,DC=com">authorizingUserDN</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -179,7 +179,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="The certificate to authenticate with the LDAP server"></a>
+                            <a href="#attr_certificate" title="The certificate to authenticate with the LDAP server">certificate</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -205,7 +205,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="To enable LDAP authentication for an enterprise, set this attribute to true. If enabled is set to false, authorizationEnabled attribute is ignored and LDAP is not used for authentication as well as authorization. The relationship between enabled and authorizationEnabled attributes is as follows, enabled = true, authorizationEnabled = false, LDAP is used only for Authentication enabled = true, authorizationEnabled = true, LDAP is used for both authentication and authorization. enabled = false, authorizationEnabled = true, LDAP is not used. enabled = false, authorizationEnabled = false, LDAP is not used."></a>
+                            <a href="#attr_enabled" title="To enable LDAP authentication for an enterprise, set this attribute to true. If enabled is set to false, authorizationEnabled attribute is ignored and LDAP is not used for authentication as well as authorization. The relationship between enabled and authorizationEnabled attributes is as follows, enabled = true, authorizationEnabled = false, LDAP is used only for Authentication enabled = true, authorizationEnabled = true, LDAP is used for both authentication and authorization. enabled = false, authorizationEnabled = true, LDAP is not used. enabled = false, authorizationEnabled = false, LDAP is not used.">enabled</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_boolean">boolean
@@ -233,7 +233,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="Specify if scope of entity is Data center or Enterprise level"></a>
+                            <a href="#attr_entityScope" title="Specify if scope of entity is Data center or Enterprise level">entityScope</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_enum">enum
@@ -270,7 +270,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="External object ID. Used for integration with third party systems"></a>
+                            <a href="#attr_externalID" title="External object ID. Used for integration with third party systems">externalID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -304,7 +304,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="This attribute is a mandatory field for LDAP authorization. When LDAP is used for authorization for an enterprise, the group DN will be used to get the list of VSD specific groups in LDAP server for the enterprise. For example, OU=VSDGroups,DC=company,DC=com"></a>
+                            <a href="#attr_groupDN" title="This attribute is a mandatory field for LDAP authorization. When LDAP is used for authorization for an enterprise, the group DN will be used to get the list of VSD specific groups in LDAP server for the enterprise. For example, OU=VSDGroups,DC=company,DC=com">groupDN</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -332,7 +332,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="ID of the user who last updated the object."></a>
+                            <a href="#attr_lastUpdatedBy" title="ID of the user who last updated the object.">lastUpdatedBy</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -360,7 +360,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="This attribute is a mandatory field for LDAP authorization. Password that will be used to verify the integrity of groups and users in LDAP server for the enterprise."></a>
+                            <a href="#attr_password" title="This attribute is a mandatory field for LDAP authorization. Password that will be used to verify the integrity of groups and users in LDAP server for the enterprise.">password</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -386,7 +386,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="Port to be used for the LDAP server"></a>
+                            <a href="#attr_port" title="Port to be used for the LDAP server">port</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -416,7 +416,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="The LDAP server IP or FQDN"></a>
+                            <a href="#attr_server" title="The LDAP server IP or FQDN">server</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -448,7 +448,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="Enable SSL for communication with the LDAP server"></a>
+                            <a href="#attr_SSLEnabled" title="Enable SSL for communication with the LDAP server">SSLEnabled</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_boolean">boolean
@@ -474,7 +474,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_" title="The DN template to be used for authentication. The template needs to have a string _USERID_ in it. This will be replaced by  the userId of the user who makes the REST API call. For example, template UID=_USERID_,OU=company,DC=com will converted to  UID=admin,OU=company,DC=com and this will be used as DN for LDAP authentication."></a>
+                            <a href="#attr_userDNTemplate" title="The DN template to be used for authentication. The template needs to have a string _USERID_ in it. This will be replaced by  the userId of the user who makes the REST API call. For example, template UID=_USERID_,OU=company,DC=com will converted to  UID=admin,OU=company,DC=com and this will be used as DN for LDAP authentication.">userDNTemplate</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -660,10 +660,10 @@
         <section id="attributes">
             <h3>Attributes documentation</h3>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_acceptAllCertificates" class="filterable" data-filter-keyword="acceptAllCertificates" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>acceptAllCertificates</b>
                         <span class="type_boolean fixed-text">boolean</span>
                         
     
@@ -709,10 +709,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_authorizationEnabled" class="filterable" data-filter-keyword="authorizationEnabled" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>authorizationEnabled</b>
                         <span class="type_boolean fixed-text">boolean</span>
                         
     
@@ -760,10 +760,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_authorizingUserDN" class="filterable" data-filter-keyword="authorizingUserDN" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>authorizingUserDN</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -811,10 +811,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_certificate" class="filterable" data-filter-keyword="certificate" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>certificate</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -860,10 +860,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_enabled" class="filterable" data-filter-keyword="enabled" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>enabled</b>
                         <span class="type_boolean fixed-text">boolean</span>
                         
     
@@ -911,10 +911,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_entityScope" class="filterable" data-filter-keyword="entityScope" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>entityScope</b>
                         <span class="type_enum fixed-text">enum</span>
                         
     
@@ -964,10 +964,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_externalID" class="filterable" data-filter-keyword="externalID" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>externalID</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1021,10 +1021,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_groupDN" class="filterable" data-filter-keyword="groupDN" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>groupDN</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1072,10 +1072,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_lastUpdatedBy" class="filterable" data-filter-keyword="lastUpdatedBy" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>lastUpdatedBy</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1123,10 +1123,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_password" class="filterable" data-filter-keyword="password" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>password</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1176,10 +1176,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_port" class="filterable" data-filter-keyword="port" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>port</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1229,10 +1229,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_server" class="filterable" data-filter-keyword="server" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>server</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1284,10 +1284,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_SSLEnabled" class="filterable" data-filter-keyword="SSLEnabled" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>SSLEnabled</b>
                         <span class="type_boolean fixed-text">boolean</span>
                         
     
@@ -1333,10 +1333,10 @@
                 </div>
             </section>
             
-            <section id="attr_" class="filterable" data-filter-keyword="" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_userDNTemplate" class="filterable" data-filter-keyword="userDNTemplate" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b></b>
+                        <b>userDNTemplate</b>
                         <span class="type_string fixed-text">string</span>
                         
     
