@@ -34,6 +34,8 @@
                             
                             <li><a data-id="attr_associatedGatewaySecurityProfileID" href="#attr_associatedGatewaySecurityProfileID" class="fixed-text">associatedGatewaySecurityProfileID</a></li>
                             
+                            <li><a data-id="attr_associatedNSGInfoID" href="#attr_associatedNSGInfoID" class="fixed-text">associatedNSGInfoID</a></li>
+                            
                             <li><a data-id="attr_autoDiscGatewayID" href="#attr_autoDiscGatewayID" class="fixed-text">autoDiscGatewayID</a></li>
                             
                             <li><a data-id="attr_bootstrapID" href="#attr_bootstrapID" class="fixed-text">bootstrapID</a></li>
@@ -43,6 +45,8 @@
                             <li><a data-id="attr_configurationReloadState" href="#attr_configurationReloadState" class="fixed-text">configurationReloadState</a></li>
                             
                             <li><a data-id="attr_configurationStatus" href="#attr_configurationStatus" class="fixed-text">configurationStatus</a></li>
+                            
+                            <li><a data-id="attr_CPUType" href="#attr_CPUType" class="fixed-text">CPUType</a></li>
                             
                             <li><a data-id="attr_datapathID" href="#attr_datapathID" class="fixed-text">datapathID</a></li>
                             
@@ -54,15 +58,21 @@
                             
                             <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
                             
+                            <li><a data-id="attr_family" href="#attr_family" class="fixed-text">family</a></li>
+                            
                             <li><a data-id="attr_lastConfigurationReloadTimestamp" href="#attr_lastConfigurationReloadTimestamp" class="fixed-text">lastConfigurationReloadTimestamp</a></li>
                             
                             <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
                             
                             <li><a data-id="attr_locationID" href="#attr_locationID" class="fixed-text">locationID</a></li>
                             
+                            <li><a data-id="attr_MACAddress" href="#attr_MACAddress" class="fixed-text">MACAddress</a></li>
+                            
                             <li><a data-id="attr_name" href="#attr_name" class="fixed-text">name</a></li>
                             
                             <li><a data-id="attr_NATTraversalEnabled" href="#attr_NATTraversalEnabled" class="fixed-text">NATTraversalEnabled</a></li>
+                            
+                            <li><a data-id="attr_NSGVersion" href="#attr_NSGVersion" class="fixed-text">NSGVersion</a></li>
                             
                             <li><a data-id="attr_pending" href="#attr_pending" class="fixed-text">pending</a></li>
                             
@@ -72,11 +82,17 @@
                             
                             <li><a data-id="attr_redundancyGroupID" href="#attr_redundancyGroupID" class="fixed-text">redundancyGroupID</a></li>
                             
+                            <li><a data-id="attr_serialNumber" href="#attr_serialNumber" class="fixed-text">serialNumber</a></li>
+                            
+                            <li><a data-id="attr_SKU" href="#attr_SKU" class="fixed-text">SKU</a></li>
+                            
                             <li><a data-id="attr_systemID" href="#attr_systemID" class="fixed-text">systemID</a></li>
                             
                             <li><a data-id="attr_templateID" href="#attr_templateID" class="fixed-text">templateID</a></li>
                             
                             <li><a data-id="attr_TPMStatus" href="#attr_TPMStatus" class="fixed-text">TPMStatus</a></li>
+                            
+                            <li><a data-id="attr_UUID" href="#attr_UUID" class="fixed-text">UUID</a></li>
                             
                         </ul>
                     </li>
@@ -156,6 +172,34 @@
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
                             
     
+    
+    
+    
+    
+    
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_associatedNSGInfoID" title="Readonly Id of the associated nsg info object">associatedNSGInfoID</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+     <span class="label label-warning"> read only </span>&nbsp;
     
     
     
@@ -338,6 +382,36 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_CPUType" title="The NSG Processor Type">CPUType</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_datapathID" title="Identifier of the Gateway, based on the systemId">datapathID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -449,6 +523,10 @@
      <span class="label label-info"> autogenerated </span>&nbsp;
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -491,6 +569,47 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_family" title="The NSG Type">family</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (ANY | NSG_E | NSG_V)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_lastConfigurationReloadTimestamp" title="Time stamp of the last known configuration update of the NSG.  This timestamp gets updated when a bootstrap is successful or when a configuration reload request triggered by VSD is successful.">lastConfigurationReloadTimestamp</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -509,10 +628,6 @@
     
     
     
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -575,6 +690,36 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_MACAddress" title="MAC Address of the NSG">MACAddress</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_name" title="Name of the Gateway">name</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -627,6 +772,36 @@
     
     
     
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_NSGVersion" title="The NSG Version">NSGVersion</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -779,6 +954,66 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_serialNumber" title="The NSG's serial number">serialNumber</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_SKU" title="The part number of the NSG">SKU</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_systemID" title="Identifier of the Gateway, cannot be modified after creation">systemID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -858,6 +1093,32 @@
     
     
      (DISABLED | ENABLED_NOT_OPERATIONAL | ENABLED_OPERATIONAL | UNKNOWN)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_UUID" title="The Redhat UUID of the NSG">UUID</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -1107,13 +1368,6 @@
     
     
     <span class="label label-primary">post</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-success">put</span>
     
             
         </div>
@@ -1367,6 +1621,29 @@
             
 
             
+            <span class="fixed-text">/nsgateways/<span class="text-muted">id</span>/<a href="nsginfo.html">nsginfos</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
             <span class="fixed-text">/nsgateways/<span class="text-muted">id</span>/<a href="nsport.html">nsports</a></span>
             
 
@@ -1544,6 +1821,57 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedGatewaySecurityProfileID</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_associatedNSGInfoID" class="filterable" data-filter-keyword="associatedNSGInfoID" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>associatedNSGInfoID</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+     <span class="label label-warning"> read only </span>&nbsp;
+    
+    
+    
+    
+    
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Readonly Id of the associated nsg info object</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedNSGInfoID</span>
                         </p>
                     </div>
                 </div>
@@ -1800,6 +2128,59 @@
                 </div>
             </section>
             
+            <section id="attr_CPUType" class="filterable" data-filter-keyword="CPUType" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>CPUType</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The NSG Processor Type</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">CPUType</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_datapathID" class="filterable" data-filter-keyword="datapathID" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -1967,6 +2348,10 @@
      <span class="label label-info"> autogenerated </span>&nbsp;
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -2063,6 +2448,59 @@
                 </div>
             </section>
             
+            <section id="attr_family" class="filterable" data-filter-keyword="family" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>family</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The NSG Type</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">ANY, NSG_E, NSG_V</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">family</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_lastConfigurationReloadTimestamp" class="filterable" data-filter-keyword="lastConfigurationReloadTimestamp" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -2075,10 +2513,6 @@
     
     
     
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -2216,6 +2650,59 @@
                 </div>
             </section>
             
+            <section id="attr_MACAddress" class="filterable" data-filter-keyword="MACAddress" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>MACAddress</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>MAC Address of the NSG</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">MACAddress</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_name" class="filterable" data-filter-keyword="name" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -2321,6 +2808,59 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">NATTraversalEnabled</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_NSGVersion" class="filterable" data-filter-keyword="NSGVersion" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>NSGVersion</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The NSG Version</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">NSGVersion</span>
                         </p>
                     </div>
                 </div>
@@ -2526,6 +3066,112 @@
                 </div>
             </section>
             
+            <section id="attr_serialNumber" class="filterable" data-filter-keyword="serialNumber" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>serialNumber</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The NSG's serial number</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">serialNumber</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_SKU" class="filterable" data-filter-keyword="SKU" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>SKU</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The part number of the NSG</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">SKU</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_systemID" class="filterable" data-filter-keyword="systemID" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -2646,10 +3292,6 @@
     
     
     
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -2684,6 +3326,59 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">TPMStatus</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_UUID" class="filterable" data-filter-keyword="UUID" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>UUID</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The Redhat UUID of the NSG</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">UUID</span>
                         </p>
                     </div>
                 </div>
