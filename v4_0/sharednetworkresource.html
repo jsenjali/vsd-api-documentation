@@ -60,6 +60,8 @@
                             
                             <li><a data-id="attr_gateway" href="#attr_gateway" class="fixed-text">gateway</a></li>
                             
+                            <li><a data-id="attr_gatewayMACAddress" href="#attr_gatewayMACAddress" class="fixed-text">gatewayMACAddress</a></li>
+                            
                             <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
                             
                             <li><a data-id="attr_name" href="#attr_name" class="fixed-text">name</a></li>
@@ -81,6 +83,8 @@
                             <li><a data-id="attr_uplinkInterfaceMAC" href="#attr_uplinkInterfaceMAC" class="fixed-text">uplinkInterfaceMAC</a></li>
                             
                             <li><a data-id="attr_uplinkVPortName" href="#attr_uplinkVPortName" class="fixed-text">uplinkVPortName</a></li>
+                            
+                            <li><a data-id="attr_useGlobalMAC" href="#attr_useGlobalMAC" class="fixed-text">useGlobalMAC</a></li>
                             
                             <li><a data-id="attr_vnID" href="#attr_vnID" class="fixed-text">vnID</a></li>
                             
@@ -568,6 +572,36 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_gatewayMACAddress" title="MAC address for a public subnet or managed l2 domain">gatewayMACAddress</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_lastUpdatedBy" title="ID of the user who last updated the object.">lastUpdatedBy</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -912,6 +946,45 @@
     
     
     
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_useGlobalMAC" title="if this flag is enabled, the system configured globalMACAddress will be used as the gateway mac address">useGlobalMAC</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (DISABLED | ENABLED)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -2129,6 +2202,59 @@
                 </div>
             </section>
             
+            <section id="attr_gatewayMACAddress" class="filterable" data-filter-keyword="gatewayMACAddress" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>gatewayMACAddress</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>MAC address for a public subnet or managed l2 domain</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">gatewayMACAddress</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_lastUpdatedBy" class="filterable" data-filter-keyword="lastUpdatedBy" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -2705,6 +2831,59 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">uplinkVPortName</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_useGlobalMAC" class="filterable" data-filter-keyword="useGlobalMAC" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>useGlobalMAC</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>if this flag is enabled, the system configured globalMACAddress will be used as the gateway mac address</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DISABLED, ENABLED</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">useGlobalMAC</span>
                         </p>
                     </div>
                 </div>

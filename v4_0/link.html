@@ -93,14 +93,23 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_acceptanceCriteria" title="a way of filtering routes to be imported from source domain into the destination domain.">acceptanceCriteria</a>
+                            <a href="#attr_acceptanceCriteria" title="A route filtering criteria enum. Defaults to ALL.">acceptanceCriteria</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
+                            <span class="type_enum">enum
     
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+     (ALL | SUBNETS_ONLY)
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -119,7 +128,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedDestinationID" title="Associated destination ID">associatedDestinationID</a>
+                            <a href="#attr_associatedDestinationID" title="This is the  ID of the domain receiving the routes from the source. This can only be set for links of type OVERLAY_ADDRESS_TRANSLATION.">associatedDestinationID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -147,7 +156,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedDestinationName" title="Associated destination name">associatedDestinationName</a>
+                            <a href="#attr_associatedDestinationName" title="None">associatedDestinationName</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -748,7 +757,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedSourceID" title="This is the source leaking/exporting the routes to the destination">associatedSourceID</a>
+                            <a href="#attr_associatedSourceID" title="The ID of the domain receiving the routes from another domain">associatedSourceID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -776,7 +785,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedSourceName" title="Associated destination name">associatedSourceName</a>
+                            <a href="#attr_associatedSourceName" title="None">associatedSourceName</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -802,7 +811,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedSourceType" title="Type of the entity type for the source">associatedSourceType</a>
+                            <a href="#attr_associatedSourceType" title="This is the source object type for the associatedSourceID">associatedSourceType</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -949,6 +958,8 @@
     
     
     
+     <span class="label label-info"> creation only </span>&nbsp;
+    
     
     
     
@@ -959,14 +970,27 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_type" title="Denotes the type of domain linking via objects: hub-and-spoke domain linking, next hop IPs or VNS border router">type</a>
+                            <a href="#attr_type" title="This is used to distinguish between different type of links: hub and spoke, ip address, VNS border router links.">type</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
+                            <span class="type_enum">enum
     
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (BORDER_ROUTER | HUB_AND_SPOKE | OVERLAY_ADDRESS_TRANSLATION | SERVICE_CHAINING)
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -1022,13 +1046,6 @@
     
     
     
-    <span class="label label-primary">post</span>
-    
-            
-            
-    
-    
-    
     <span class="label label-success">put</span>
     
             
@@ -1047,6 +1064,35 @@
     
 
     
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+            
+            <span class="fixed-text">/<a href="domain.html">domains</a>/<span class="text-muted">id</span>/links</span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
     
     <div class="row bordered-row">
         <div class="col-xs-7">
@@ -1091,6 +1137,35 @@
         </div>
     </div>
     
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+            
+            <span class="fixed-text">/<a href="domain.html">domains</a>/<span class="text-muted">id</span>/links</span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
     
     
         </section>
@@ -1110,7 +1185,67 @@
             
 
             
+            <span class="fixed-text">/links/<span class="text-muted">id</span>/<a href="demarcationservice.html">demarcationservices</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
             <span class="fixed-text">/links/<span class="text-muted">id</span>/<a href="metadata.html">metadatas</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
+            <span class="fixed-text">/links/<span class="text-muted">id</span>/<a href="nexthopaddress.html">nexthopaddress</a></span>
             
 
             
@@ -1171,6 +1306,36 @@
         </div>
     </div>
     
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
+            <span class="fixed-text">/links/<span class="text-muted">id</span>/<a href="overlayaddresspool.html">overlayaddresspools</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
     
     
         </section>
@@ -1182,7 +1347,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
                         <b>acceptanceCriteria</b>
-                        <span class="type_string fixed-text">string</span>
+                        <span class="type_enum fixed-text">enum</span>
                         
     
     
@@ -1197,20 +1362,22 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>a way of filtering routes to be imported from source domain into the destination domain.</p>
+                        <p>A route filtering criteria enum. Defaults to ALL.</p>
 
                         <hr/>
 
                         <h5><b>Charateristics</b></h5>
                         <p>
                             
-
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">ALL, SUBNETS_ONLY</span><br/>
                             
 
                             
 
                             
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">ALL</span><br/>
+                            
+
                             
 
                             
@@ -1248,7 +1415,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Associated destination ID</p>
+                        <p>This is the  ID of the domain receiving the routes from the source. This can only be set for links of type OVERLAY_ADDRESS_TRANSLATION.</p>
 
                         <hr/>
 
@@ -1297,7 +1464,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Associated destination name</p>
+                        <p>None</p>
 
                         <hr/>
 
@@ -1309,8 +1476,6 @@
 
                             
 
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
                             
 
                             
@@ -1363,8 +1528,6 @@
                             
 
                             
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
 
                             
 
@@ -1401,7 +1564,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>This is the source leaking/exporting the routes to the destination</p>
+                        <p>The ID of the domain receiving the routes from another domain</p>
 
                         <hr/>
 
@@ -1450,7 +1613,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Associated destination name</p>
+                        <p>None</p>
 
                         <hr/>
 
@@ -1501,7 +1664,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Type of the entity type for the source</p>
+                        <p>This is the source object type for the associatedSourceID</p>
 
                         <hr/>
 
@@ -1706,6 +1869,8 @@
     
     
     
+     <span class="label label-info"> creation only </span>&nbsp;
+    
     
     
     
@@ -1728,8 +1893,6 @@
                             
 
                             
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
 
                             
 
@@ -1749,7 +1912,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
                         <b>type</b>
-                        <span class="type_string fixed-text">string</span>
+                        <span class="type_enum fixed-text">enum</span>
                         
     
     
@@ -1764,20 +1927,20 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Denotes the type of domain linking via objects: hub-and-spoke domain linking, next hop IPs or VNS border router</p>
+                        <p>This is used to distinguish between different type of links: hub and spoke, ip address, VNS border router links.</p>
 
                         <hr/>
 
                         <h5><b>Charateristics</b></h5>
                         <p>
                             
-
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">BORDER_ROUTER, HUB_AND_SPOKE, OVERLAY_ADDRESS_TRANSLATION, SERVICE_CHAINING</span><br/>
                             
 
                             
 
                             
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+
                             
 
                             

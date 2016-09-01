@@ -38,6 +38,8 @@
                             
                             <li><a data-id="attr_DHCPManaged" href="#attr_DHCPManaged" class="fixed-text">DHCPManaged</a></li>
                             
+                            <li><a data-id="attr_DPI" href="#attr_DPI" class="fixed-text">DPI</a></li>
+                            
                             <li><a data-id="attr_encryption" href="#attr_encryption" class="fixed-text">encryption</a></li>
                             
                             <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
@@ -45,6 +47,8 @@
                             <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
                             
                             <li><a data-id="attr_gateway" href="#attr_gateway" class="fixed-text">gateway</a></li>
+                            
+                            <li><a data-id="attr_gatewayMACAddress" href="#attr_gatewayMACAddress" class="fixed-text">gatewayMACAddress</a></li>
                             
                             <li><a data-id="attr_IPType" href="#attr_IPType" class="fixed-text">IPType</a></li>
                             
@@ -57,6 +61,8 @@
                             <li><a data-id="attr_netmask" href="#attr_netmask" class="fixed-text">netmask</a></li>
                             
                             <li><a data-id="attr_policyChangeStatus" href="#attr_policyChangeStatus" class="fixed-text">policyChangeStatus</a></li>
+                            
+                            <li><a data-id="attr_useGlobalMAC" href="#attr_useGlobalMAC" class="fixed-text">useGlobalMAC</a></li>
                             
                         </ul>
                     </li>
@@ -211,6 +217,36 @@
                     
                     <tr>
                         <td class="fixed-text">
+                            <a href="#attr_DPI" title="determines whether or not Deep packet inspection is enabled">DPI</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_boolean">boolean
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
                             <a href="#attr_encryption" title="Determines whether IPSEC is enabled Possible values are ENABLED, DISABLED, .">encryption</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
@@ -324,6 +360,36 @@
                     <tr>
                         <td class="fixed-text">
                             <a href="#attr_gateway" title="The IP address of the gateway of this l2 domain">gateway</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_gatewayMACAddress" title="gateway MAC address for a managed l2 domain">gatewayMACAddress</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -521,7 +587,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_policyChangeStatus" title="">policyChangeStatus</a>
+                            <a href="#attr_policyChangeStatus" title="None">policyChangeStatus</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_enum">enum
@@ -552,6 +618,45 @@
     
      <span class="label label-info"> filterable </span>&nbsp;
     
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_useGlobalMAC" title="Enable this flag to use system configured globalMACAddress as the gateway mac address for managed l2 domains">useGlobalMAC</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (DISABLED | ENABLED)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -1307,6 +1412,59 @@
                 </div>
             </section>
             
+            <section id="attr_DPI" class="filterable" data-filter-keyword="DPI" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>DPI</b>
+                        <span class="type_boolean fixed-text">boolean</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>determines whether or not Deep packet inspection is enabled</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">false</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">DPI</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
             <section id="attr_encryption" class="filterable" data-filter-keyword="encryption" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
@@ -1522,6 +1680,59 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">gateway</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_gatewayMACAddress" class="filterable" data-filter-keyword="gatewayMACAddress" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>gatewayMACAddress</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>gateway MAC address for a managed l2 domain</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">gatewayMACAddress</span>
                         </p>
                     </div>
                 </div>
@@ -1815,7 +2026,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p></p>
+                        <p>None</p>
 
                         <hr/>
 
@@ -1842,6 +2053,61 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">policyChangeStatus</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_useGlobalMAC" class="filterable" data-filter-keyword="useGlobalMAC" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>useGlobalMAC</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Enable this flag to use system configured globalMACAddress as the gateway mac address for managed l2 domains</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DISABLED, ENABLED</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">DISABLED</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">useGlobalMAC</span>
                         </p>
                     </div>
                 </div>

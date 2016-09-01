@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>EnterpriseNetwork API Reference 4.0</title>
+    <title>NextHopAddress API Reference 4.0</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -30,21 +30,15 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Attributes <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             
-                            <li><a data-id="attr_address" href="#attr_address" class="fixed-text">address</a></li>
-                            
                             <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
                             
                             <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
                             
-                            <li><a data-id="attr_IPType" href="#attr_IPType" class="fixed-text">IPType</a></li>
-                            
-                            <li><a data-id="attr_IPv6Address" href="#attr_IPv6Address" class="fixed-text">IPv6Address</a></li>
+                            <li><a data-id="attr_ip" href="#attr_ip" class="fixed-text">ip</a></li>
                             
                             <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
                             
-                            <li><a data-id="attr_name" href="#attr_name" class="fixed-text">name</a></li>
-                            
-                            <li><a data-id="attr_netmask" href="#attr_netmask" class="fixed-text">netmask</a></li>
+                            <li><a data-id="attr_routeDistinguisher" href="#attr_routeDistinguisher" class="fixed-text">routeDistinguisher</a></li>
                             
                         </ul>
                     </li>
@@ -75,45 +69,13 @@
     <div class="container">
 
         <section id="intro">
-            <h2>EnterpriseNetwork</h2>
-            <p>Administrators of an enterprise can define macros that are set of IP addresses that identify enterprise networks. These macros can be used in the ACL definitions by network designers and other users to identify access restrictions towards specific enterprise networks.</p>
+            <h2>NextHopAddress</h2>
+            <p>This represents a /32 IPv4 address as the next-hop. In the future can be a /128 IPv6 address.</p>
         </section>
 
         <section id="overview">
             <h3>Overview</h3>
                 <table class="width: 100%">
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_address" title="IP address of the subnet defined. In case of zone, this is an optional field for and allows users to allocate an IP address range to a zone. The VSD will auto-assign IP addresses to subnets from this range if a specific IP address is not defined for the subnet">address</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-     <span class="label label-danger"> required </span>&nbsp;
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
                     
                     <tr>
                         <td class="fixed-text">
@@ -192,48 +154,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_IPType" title="IPv4 or IPv6(only IPv4 is supported in R1.0) Possible values are IPV4, IPV6, .">IPType</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_enum">enum
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     (DUALSTACK | IPV4 | IPV6)
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_IPv6Address" title="IPv6 address of the subnet defined. In case of zone, this is an optional field for and allows users to allocate an IP address range to a zone. The VSD will auto-assign IP addresses to subnets from this range if a specific IP address is not defined for the subnet">IPv6Address</a>
+                            <a href="#attr_ip" title="This is the /32 or /128 next-hop IP address. Currently we support only IPv4 address family.">ip</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -291,7 +212,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_name" title="Name of the current entity(Zone or zone template or subnet etc..) Valid characters are alphabets, numbers, space and hyphen( - ).">name</a>
+                            <a href="#attr_routeDistinguisher" title="The next-hop's route distinguisher. A unique 8 byte long. If not provided one will be generated.">routeDistinguisher</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -318,35 +239,7 @@
     
     
     
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_netmask" title="Netmask of the subnet defined">netmask</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-     <span class="label label-danger"> required </span>&nbsp;
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
+     <span class="label label-warning"> locally unique </span>&nbsp;
     
     
     
@@ -369,31 +262,10 @@
         <div class="col-xs-7">
 
             
-            <span class="fixed-text">/enterprisenetworks/<span class="text-muted">id</span></a>
+            <span class="fixed-text">/nexthops/<span class="text-muted">id</span></a>
             
         </div>
         <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-danger">delete</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-success">put</span>
-    
             
         </div>
     </div>
@@ -410,65 +282,7 @@
     
 
     
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-            
-            <span class="fixed-text">/<a href="networkmacrogroup.html">networkmacrogroups</a>/<span class="text-muted">id</span>/enterprisenetworks</span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-success">put</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-            
-            <span class="fixed-text">/<a href="enterprise.html">enterprises</a>/<span class="text-muted">id</span>/enterprisenetworks</span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-primary">post</span>
-    
-            
-        </div>
-    </div>
-    
+    <p>This object has no parents.</p>
     
     
         </section>
@@ -488,7 +302,7 @@
             
 
             
-            <span class="fixed-text">/enterprisenetworks/<span class="text-muted">id</span>/<a href="metadata.html">metadatas</a></span>
+            <span class="fixed-text">/nexthops/<span class="text-muted">id</span>/<a href="metadata.html">metadatas</a></span>
             
 
             
@@ -518,37 +332,7 @@
             
 
             
-            <span class="fixed-text">/enterprisenetworks/<span class="text-muted">id</span>/<a href="networkmacrogroup.html">networkmacrogroups</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-success">put</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/enterprisenetworks/<span class="text-muted">id</span>/<a href="globalmetadata.html">globalmetadatas</a></span>
+            <span class="fixed-text">/nexthops/<span class="text-muted">id</span>/<a href="globalmetadata.html">globalmetadatas</a></span>
             
 
             
@@ -574,29 +358,6 @@
     
     
     <span class="label label-success">put</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/enterprisenetworks/<span class="text-muted">id</span>/<a href="eventlog.html">eventlogs</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
     
             
         </div>
@@ -608,61 +369,6 @@
 
         <section id="attributes">
             <h3>Attributes documentation</h3>
-            
-            <section id="attr_address" class="filterable" data-filter-keyword="address" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>address</b>
-                        <span class="type_string fixed-text">string</span>
-                        
-    
-     <span class="label label-danger"> required </span>&nbsp;
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>IP address of the subnet defined. In case of zone, this is an optional field for and allows users to allocate an IP address range to a zone. The VSD will auto-assign IP addresses to subnets from this range if a specific IP address is not defined for the subnet</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">address</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
             
             <section id="attr_entityScope" class="filterable" data-filter-keyword="entityScope" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
@@ -778,65 +484,10 @@
                 </div>
             </section>
             
-            <section id="attr_IPType" class="filterable" data-filter-keyword="IPType" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_ip" class="filterable" data-filter-keyword="ip" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>IPType</b>
-                        <span class="type_enum fixed-text">enum</span>
-                        
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>IPv4 or IPv6(only IPv4 is supported in R1.0) Possible values are IPV4, IPV6, .</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DUALSTACK, IPV4, IPV6</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">IPType</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_IPv6Address" class="filterable" data-filter-keyword="IPv6Address" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>IPv6Address</b>
+                        <b>ip</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -856,7 +507,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>IPv6 address of the subnet defined. In case of zone, this is an optional field for and allows users to allocate an IP address range to a zone. The VSD will auto-assign IP addresses to subnets from this range if a specific IP address is not defined for the subnet</p>
+                        <p>This is the /32 or /128 next-hop IP address. Currently we support only IPv4 address family.</p>
 
                         <hr/>
 
@@ -880,7 +531,7 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">IPv6Address</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">ip</span>
                         </p>
                     </div>
                 </div>
@@ -937,10 +588,10 @@
                 </div>
             </section>
             
-            <section id="attr_name" class="filterable" data-filter-keyword="name" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_routeDistinguisher" class="filterable" data-filter-keyword="routeDistinguisher" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>name</b>
+                        <b>routeDistinguisher</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -958,11 +609,15 @@
     
     
     
+     <span class="label label-warning"> locally unique </span>&nbsp;
+    
+    
+    
                     </div>
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Name of the current entity(Zone or zone template or subnet etc..) Valid characters are alphabets, numbers, space and hyphen( - ).</p>
+                        <p>The next-hop's route distinguisher. A unique 8 byte long. If not provided one will be generated.</p>
 
                         <hr/>
 
@@ -974,8 +629,6 @@
 
                             
 
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
                             
 
                             
@@ -983,69 +636,14 @@
                             
 
                             
-                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">64</span><br/>
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
                             
 
                             
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">name</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_netmask" class="filterable" data-filter-keyword="netmask" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>netmask</b>
-                        <span class="type_string fixed-text">string</span>
-                        
-    
-     <span class="label label-danger"> required </span>&nbsp;
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>Netmask of the subnet defined</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">netmask</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">routeDistinguisher</span>
                         </p>
                     </div>
                 </div>

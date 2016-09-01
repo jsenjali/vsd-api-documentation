@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>App API Reference 4.0</title>
+    <title>Application API Reference 4.0</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -30,27 +30,43 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Attributes <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             
-                            <li><a data-id="attr_assocEgressACLTemplateId" href="#attr_assocEgressACLTemplateId" class="fixed-text">assocEgressACLTemplateId</a></li>
-                            
-                            <li><a data-id="attr_associatedDomainID" href="#attr_associatedDomainID" class="fixed-text">associatedDomainID</a></li>
-                            
-                            <li><a data-id="attr_associatedDomainType" href="#attr_associatedDomainType" class="fixed-text">associatedDomainType</a></li>
-                            
-                            <li><a data-id="attr_associatedNetworkObjectID" href="#attr_associatedNetworkObjectID" class="fixed-text">associatedNetworkObjectID</a></li>
-                            
-                            <li><a data-id="attr_associatedNetworkObjectType" href="#attr_associatedNetworkObjectType" class="fixed-text">associatedNetworkObjectType</a></li>
-                            
-                            <li><a data-id="attr_assocIngressACLTemplateId" href="#attr_assocIngressACLTemplateId" class="fixed-text">assocIngressACLTemplateId</a></li>
+                            <li><a data-id="attr_associatedL7ApplicationSignatureID" href="#attr_associatedL7ApplicationSignatureID" class="fixed-text">associatedL7ApplicationSignatureID</a></li>
                             
                             <li><a data-id="attr_description" href="#attr_description" class="fixed-text">description</a></li>
                             
-                            <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
+                            <li><a data-id="attr_destinationIP" href="#attr_destinationIP" class="fixed-text">destinationIP</a></li>
                             
-                            <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
+                            <li><a data-id="attr_destinationPort" href="#attr_destinationPort" class="fixed-text">destinationPort</a></li>
                             
-                            <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
+                            <li><a data-id="attr_DSCP" href="#attr_DSCP" class="fixed-text">DSCP</a></li>
+                            
+                            <li><a data-id="attr_enablePPS" href="#attr_enablePPS" class="fixed-text">enablePPS</a></li>
+                            
+                            <li><a data-id="attr_etherType" href="#attr_etherType" class="fixed-text">etherType</a></li>
                             
                             <li><a data-id="attr_name" href="#attr_name" class="fixed-text">name</a></li>
+                            
+                            <li><a data-id="attr_oneWayDelay" href="#attr_oneWayDelay" class="fixed-text">oneWayDelay</a></li>
+                            
+                            <li><a data-id="attr_oneWayJitter" href="#attr_oneWayJitter" class="fixed-text">oneWayJitter</a></li>
+                            
+                            <li><a data-id="attr_oneWayLoss" href="#attr_oneWayLoss" class="fixed-text">oneWayLoss</a></li>
+                            
+                            <li><a data-id="attr_optimizePathSelection" href="#attr_optimizePathSelection" class="fixed-text">optimizePathSelection</a></li>
+                            
+                            <li><a data-id="attr_performanceMonitorType" href="#attr_performanceMonitorType" class="fixed-text">performanceMonitorType</a></li>
+                            
+                            <li><a data-id="attr_postClassificationPath" href="#attr_postClassificationPath" class="fixed-text">postClassificationPath</a></li>
+                            
+                            <li><a data-id="attr_preClassificationPath" href="#attr_preClassificationPath" class="fixed-text">preClassificationPath</a></li>
+                            
+                            <li><a data-id="attr_protocol" href="#attr_protocol" class="fixed-text">protocol</a></li>
+                            
+                            <li><a data-id="attr_readOnly" href="#attr_readOnly" class="fixed-text">readOnly</a></li>
+                            
+                            <li><a data-id="attr_sourceIP" href="#attr_sourceIP" class="fixed-text">sourceIP</a></li>
+                            
+                            <li><a data-id="attr_sourcePort" href="#attr_sourcePort" class="fixed-text">sourcePort</a></li>
                             
                         </ul>
                     </li>
@@ -81,8 +97,8 @@
     <div class="container">
 
         <section id="intro">
-            <h2>App</h2>
-            <p>Represents a real life application like a vendor website, or a social network.</p>
+            <h2>Application</h2>
+            <p>represents a application with L4/L7 classification</p>
         </section>
 
         <section id="overview">
@@ -91,33 +107,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_assocEgressACLTemplateId" title="The ID of the ACL template that this application is pointing to.">assocEgressACLTemplateId</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_associatedDomainID" title="Domain id where the application is running.">associatedDomainID</a>
+                            <a href="#attr_associatedL7ApplicationSignatureID" title="associated Layer7 Application Type ID">associatedL7ApplicationSignatureID</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -149,23 +139,194 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedDomainType" title="Type of domain (DOMAIN, L2DOMAIN). Refer to API section for supported types.">associatedDomainType</a>
+                            <a href="#attr_description" title="description of Application">description</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_enum">enum
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
     
     
     
     
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_destinationIP" title="destination IP in CIDR format">destinationIP</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
     
     
     
     
     
     
-     (DOMAIN | L2DOMAIN)
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_destinationPort" title="value should be either * or single port number ">destinationPort</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_DSCP" title="DSCP match condition to be set in the rule">DSCP</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_enablePPS" title="Enable the performance probe for this application">enablePPS</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_boolean">boolean
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_etherType" title="Ether type of the packet to be matched. etherType can be * or a valid hexadecimal value">etherType</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_name" title="name of the application">name</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -190,10 +351,10 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedNetworkObjectID" title="ID of the network object that this App is associated with.">associatedNetworkObjectID</a>
+                            <a href="#attr_oneWayDelay" title="one way Delay">oneWayDelay</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
+                            <span class="type_integer">integer
     
     
     
@@ -208,6 +369,10 @@
     
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -216,7 +381,67 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_associatedNetworkObjectType" title="Type of network object this App is associated with (ENTERPRISE, DOMAIN) Refer to API section for supported types.">associatedNetworkObjectType</a>
+                            <a href="#attr_oneWayJitter" title="one way Jitter">oneWayJitter</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_integer">integer
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_oneWayLoss" title="one way loss">oneWayLoss</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_float">float
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_optimizePathSelection" title="with values being Latency, Jitter, PacketLoss">optimizePathSelection</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_enum">enum
@@ -234,7 +459,7 @@
     
     
     
-     (DOMAIN | ENTERPRISE | ZONE)
+     (JITTER | LATENCY | PACKETLOSS)
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -257,63 +482,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_assocIngressACLTemplateId" title="The ID of the ACL template that this application is pointing to">assocIngressACLTemplateId</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_description" title="Description of the application.">description</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_entityScope" title="Specify if scope of entity is Data center or Enterprise level">entityScope</a>
+                            <a href="#attr_performanceMonitorType" title="Describes the trigger for the application.">performanceMonitorType</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_enum">enum
@@ -329,39 +498,9 @@
     
     
     
-     (ENTERPRISE | GLOBAL)
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
     
     
-    
-    
-    
-     <span class="label label-info"> autogenerated </span>&nbsp;
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_externalID" title="External object ID. Used for integration with third party systems">externalID</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_string">string
-    
-    
-    
-    
+     (CONTINUOUS | FIRST_PACKET | FIRST_PACKET_AND_CONTINUOUS)
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -379,7 +518,44 @@
     
     
     
-     <span class="label label-warning"> locally unique </span>&nbsp;
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_postClassificationPath" title="default set to any , possible values primary/secondary/any">postClassificationPath</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (ANY | PRIMARY | SECONDARY)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -388,7 +564,119 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_lastUpdatedBy" title="ID of the user who last updated the object.">lastUpdatedBy</a>
+                            <a href="#attr_preClassificationPath" title="default set to primary , possible values primary/secondary">preClassificationPath</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (DEFAULT | PRIMARY | SECONDARY)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_protocol" title="Protocol number that must be matched">protocol</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_enum">enum
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     (NONE | TCP | UDP)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_readOnly" title="determines whether this entity is read only.  Read only objects cannot be modified or deleted.">readOnly</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_boolean">boolean
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_sourceIP" title="source IP address">sourceIP</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -405,9 +693,11 @@
     
     
     
-     <span class="label label-info"> autogenerated </span>&nbsp;
+    
+     <span class="label label-info"> filterable </span>&nbsp;
     
     
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -416,7 +706,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_name" title="Name of the application.">name</a>
+                            <a href="#attr_sourcePort" title="source Port ,value should be either * or single port number ">sourcePort</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -428,8 +718,6 @@
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
                             
-    
-     <span class="label label-danger"> required </span>&nbsp;
     
     
     
@@ -509,6 +797,28 @@
 
             
             
+            <span class="fixed-text">/<a href="l7applicationsignature.html">l7applicationsignatures</a>/<span class="text-muted">id</span>/applications</span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+            
             <span class="fixed-text">/<a href="enterprise.html">enterprises</a>/<span class="text-muted">id</span>/applications</span>
             
 
@@ -552,7 +862,7 @@
             
 
             
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="metadata.html">metadatas</a></span>
+            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="monitorscope.html">monitorscopes</a></span>
             
 
             
@@ -582,127 +892,7 @@
             
 
             
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="tier.html">tiers</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-primary">post</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="globalmetadata.html">globalmetadatas</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-primary">post</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-success">put</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="flow.html">flows</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-default">get</span>
-    
-            
-            
-    
-    
-    
-    <span class="label label-primary">post</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="job.html">jobs</a></span>
-            
-
-            
-        </div>
-        <div class="col-xs-5 text-right">
-            
-            
-    
-    
-    
-    <span class="label label-primary">post</span>
-    
-            
-        </div>
-    </div>
-    
-    <div class="row bordered-row">
-        <div class="col-xs-7">
-
-            
-
-            
-            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="eventlog.html">eventlogs</a></span>
+            <span class="fixed-text">/applications/<span class="text-muted">id</span>/<a href="applicationbinding.html">applicationbindings</a></span>
             
 
             
@@ -726,59 +916,10 @@
         <section id="attributes">
             <h3>Attributes documentation</h3>
             
-            <section id="attr_assocEgressACLTemplateId" class="filterable" data-filter-keyword="assocEgressACLTemplateId" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_associatedL7ApplicationSignatureID" class="filterable" data-filter-keyword="associatedL7ApplicationSignatureID" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>assocEgressACLTemplateId</b>
-                        <span class="type_string fixed-text">string</span>
-                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>The ID of the ACL template that this application is pointing to.</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">assocEgressACLTemplateId</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_associatedDomainID" class="filterable" data-filter-keyword="associatedDomainID" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>associatedDomainID</b>
+                        <b>associatedL7ApplicationSignatureID</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -800,7 +941,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Domain id where the application is running.</p>
+                        <p>associated Layer7 Application Type ID</p>
 
                         <hr/>
 
@@ -817,222 +958,18 @@
                             
 
                             
+                            <span class="small"><b>Min lenght: </b></span><span class="fixed-text">1</span><br/>
+                            
 
+                            
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
                             
 
                             
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedDomainID</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_associatedDomainType" class="filterable" data-filter-keyword="associatedDomainType" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>associatedDomainType</b>
-                        <span class="type_enum fixed-text">enum</span>
-                        
-    
-     <span class="label label-danger"> required </span>&nbsp;
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>Type of domain (DOMAIN, L2DOMAIN). Refer to API section for supported types.</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DOMAIN, L2DOMAIN</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedDomainType</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_associatedNetworkObjectID" class="filterable" data-filter-keyword="associatedNetworkObjectID" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>associatedNetworkObjectID</b>
-                        <span class="type_string fixed-text">string</span>
-                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>ID of the network object that this App is associated with.</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedNetworkObjectID</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_associatedNetworkObjectType" class="filterable" data-filter-keyword="associatedNetworkObjectType" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>associatedNetworkObjectType</b>
-                        <span class="type_enum fixed-text">enum</span>
-                        
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>Type of network object this App is associated with (ENTERPRISE, DOMAIN) Refer to API section for supported types.</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DOMAIN, ENTERPRISE, ZONE</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedNetworkObjectType</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_assocIngressACLTemplateId" class="filterable" data-filter-keyword="assocIngressACLTemplateId" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>assocIngressACLTemplateId</b>
-                        <span class="type_string fixed-text">string</span>
-                        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>The ID of the ACL template that this application is pointing to</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">assocIngressACLTemplateId</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedL7ApplicationSignatureID</span>
                         </p>
                     </div>
                 </div>
@@ -1061,7 +998,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Description of the application.</p>
+                        <p>description of Application</p>
 
                         <hr/>
 
@@ -1093,67 +1030,10 @@
                 </div>
             </section>
             
-            <section id="attr_entityScope" class="filterable" data-filter-keyword="entityScope" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_destinationIP" class="filterable" data-filter-keyword="destinationIP" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>entityScope</b>
-                        <span class="type_enum fixed-text">enum</span>
-                        
-    
-    
-    
-    
-    
-     <span class="label label-info"> autogenerated </span>&nbsp;
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>Specify if scope of entity is Data center or Enterprise level</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">ENTERPRISE, GLOBAL</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">entityScope</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_externalID" class="filterable" data-filter-keyword="externalID" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>externalID</b>
+                        <b>destinationIP</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1169,15 +1049,11 @@
     
     
     
-     <span class="label label-warning"> locally unique </span>&nbsp;
-    
-    
-    
                     </div>
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>External object ID. Used for integration with third party systems</p>
+                        <p>destination IP in CIDR format</p>
 
                         <hr/>
 
@@ -1190,7 +1066,7 @@
                             
 
                             
-                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">cidr</span><br/>
                             
 
                             
@@ -1201,16 +1077,16 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">externalID</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">destinationIP</span>
                         </p>
                     </div>
                 </div>
             </section>
             
-            <section id="attr_lastUpdatedBy" class="filterable" data-filter-keyword="lastUpdatedBy" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_destinationPort" class="filterable" data-filter-keyword="destinationPort" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>lastUpdatedBy</b>
+                        <b>destinationPort</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -1218,9 +1094,11 @@
     
     
     
-     <span class="label label-info"> autogenerated </span>&nbsp;
+    
+     <span class="label label-info"> filterable </span>&nbsp;
     
     
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -1228,7 +1106,62 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>ID of the user who last updated the object.</p>
+                        <p>value should be either * or single port number </p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">5</span><br/>
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">destinationPort</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_DSCP" class="filterable" data-filter-keyword="DSCP" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>DSCP</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>DSCP match condition to be set in the rule</p>
 
                         <hr/>
 
@@ -1252,7 +1185,113 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">lastUpdatedBy</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">DSCP</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_enablePPS" class="filterable" data-filter-keyword="enablePPS" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>enablePPS</b>
+                        <span class="type_boolean fixed-text">boolean</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Enable the performance probe for this application</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">false</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">enablePPS</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_etherType" class="filterable" data-filter-keyword="etherType" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>etherType</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Ether type of the packet to be matched. etherType can be * or a valid hexadecimal value</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">etherType</span>
                         </p>
                     </div>
                 </div>
@@ -1283,7 +1322,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Name of the application.</p>
+                        <p>name of the application</p>
 
                         <hr/>
 
@@ -1304,7 +1343,7 @@
                             
 
                             
-                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">64</span><br/>
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
                             
 
                             
@@ -1312,6 +1351,593 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">name</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_oneWayDelay" class="filterable" data-filter-keyword="oneWayDelay" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>oneWayDelay</b>
+                        <span class="type_integer fixed-text">integer</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>one way Delay</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">oneWayDelay</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_oneWayJitter" class="filterable" data-filter-keyword="oneWayJitter" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>oneWayJitter</b>
+                        <span class="type_integer fixed-text">integer</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>one way Jitter</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">oneWayJitter</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_oneWayLoss" class="filterable" data-filter-keyword="oneWayLoss" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>oneWayLoss</b>
+                        <span class="type_float fixed-text">float</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>one way loss</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">oneWayLoss</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_optimizePathSelection" class="filterable" data-filter-keyword="optimizePathSelection" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>optimizePathSelection</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>with values being Latency, Jitter, PacketLoss</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">JITTER, LATENCY, PACKETLOSS</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">optimizePathSelection</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_performanceMonitorType" class="filterable" data-filter-keyword="performanceMonitorType" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>performanceMonitorType</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Describes the trigger for the application.</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">CONTINUOUS, FIRST_PACKET, FIRST_PACKET_AND_CONTINUOUS</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">FIRST_PACKET</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">performanceMonitorType</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_postClassificationPath" class="filterable" data-filter-keyword="postClassificationPath" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>postClassificationPath</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>default set to any , possible values primary/secondary/any</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">ANY, PRIMARY, SECONDARY</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">ANY</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">postClassificationPath</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_preClassificationPath" class="filterable" data-filter-keyword="preClassificationPath" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>preClassificationPath</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>default set to primary , possible values primary/secondary</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">DEFAULT, PRIMARY, SECONDARY</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">DEFAULT</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">preClassificationPath</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_protocol" class="filterable" data-filter-keyword="protocol" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>protocol</b>
+                        <span class="type_enum fixed-text">enum</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Protocol number that must be matched</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">NONE, TCP, UDP</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">NONE</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">protocol</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_readOnly" class="filterable" data-filter-keyword="readOnly" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>readOnly</b>
+                        <span class="type_boolean fixed-text">boolean</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>determines whether this entity is read only.  Read only objects cannot be modified or deleted.</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Default value: </b></span><span class="fixed-text">false</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">readOnly</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_sourceIP" class="filterable" data-filter-keyword="sourceIP" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>sourceIP</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>source IP address</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">sourceIP</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_sourcePort" class="filterable" data-filter-keyword="sourcePort" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>sourcePort</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>source Port ,value should be either * or single port number </p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">5</span><br/>
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">sourcePort</span>
                         </p>
                     </div>
                 </div>

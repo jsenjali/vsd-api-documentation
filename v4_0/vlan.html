@@ -34,6 +34,10 @@
                             
                             <li><a data-id="attr_associatedEgressQOSPolicyID" href="#attr_associatedEgressQOSPolicyID" class="fixed-text">associatedEgressQOSPolicyID</a></li>
                             
+                            <li><a data-id="attr_associatedUplinkConnectionID" href="#attr_associatedUplinkConnectionID" class="fixed-text">associatedUplinkConnectionID</a></li>
+                            
+                            <li><a data-id="attr_associatedVSCProfileID" href="#attr_associatedVSCProfileID" class="fixed-text">associatedVSCProfileID</a></li>
+                            
                             <li><a data-id="attr_description" href="#attr_description" class="fixed-text">description</a></li>
                             
                             <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
@@ -149,6 +153,66 @@
     
     
     
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_associatedUplinkConnectionID" title="Associated uplink connection ID">associatedUplinkConnectionID</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_associatedVSCProfileID" title="The associated VSC profile for the uplink VLANS. This should be only be valid for the uplinks">associatedVSCProfileID</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -594,6 +658,10 @@
     
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -1033,6 +1101,66 @@
             
 
             
+            <span class="fixed-text">/vlans/<span class="text-muted">id</span>/<a href="uplinkconnection.html">uplinkconnections</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
+            <span class="fixed-text">/vlans/<span class="text-muted">id</span>/<a href="brconnections.html">brconnections</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
             <span class="fixed-text">/vlans/<span class="text-muted">id</span>/<a href="eventlog.html">eventlogs</a></span>
             
 
@@ -1154,6 +1282,112 @@
                             
 
                             <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedEgressQOSPolicyID</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_associatedUplinkConnectionID" class="filterable" data-filter-keyword="associatedUplinkConnectionID" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>associatedUplinkConnectionID</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>Associated uplink connection ID</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedUplinkConnectionID</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_associatedVSCProfileID" class="filterable" data-filter-keyword="associatedVSCProfileID" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>associatedVSCProfileID</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>The associated VSC profile for the uplink VLANS. This should be only be valid for the uplinks</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">associatedVSCProfileID</span>
                         </p>
                     </div>
                 </div>
@@ -1858,6 +2092,10 @@
     
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
