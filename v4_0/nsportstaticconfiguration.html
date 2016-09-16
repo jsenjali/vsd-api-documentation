@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PerformanceMonitor API Reference 4.0</title>
+    <title>NSPortStaticConfiguration API Reference 4.0</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -30,17 +30,21 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Attributes <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             
-                            <li><a data-id="attr_description" href="#attr_description" class="fixed-text">description</a></li>
+                            <li><a data-id="attr_address" href="#attr_address" class="fixed-text">address</a></li>
                             
-                            <li><a data-id="attr_interval" href="#attr_interval" class="fixed-text">interval</a></li>
+                            <li><a data-id="attr_DNSAddress" href="#attr_DNSAddress" class="fixed-text">DNSAddress</a></li>
                             
-                            <li><a data-id="attr_name" href="#attr_name" class="fixed-text">name</a></li>
+                            <li><a data-id="attr_enabled" href="#attr_enabled" class="fixed-text">enabled</a></li>
                             
-                            <li><a data-id="attr_numberOfPackets" href="#attr_numberOfPackets" class="fixed-text">numberOfPackets</a></li>
+                            <li><a data-id="attr_entityScope" href="#attr_entityScope" class="fixed-text">entityScope</a></li>
                             
-                            <li><a data-id="attr_payloadSize" href="#attr_payloadSize" class="fixed-text">payloadSize</a></li>
+                            <li><a data-id="attr_externalID" href="#attr_externalID" class="fixed-text">externalID</a></li>
                             
-                            <li><a data-id="attr_serviceClass" href="#attr_serviceClass" class="fixed-text">serviceClass</a></li>
+                            <li><a data-id="attr_gateway" href="#attr_gateway" class="fixed-text">gateway</a></li>
+                            
+                            <li><a data-id="attr_lastUpdatedBy" href="#attr_lastUpdatedBy" class="fixed-text">lastUpdatedBy</a></li>
+                            
+                            <li><a data-id="attr_netmask" href="#attr_netmask" class="fixed-text">netmask</a></li>
                             
                         </ul>
                     </li>
@@ -71,8 +75,8 @@
     <div class="container">
 
         <section id="intro">
-            <h2>PerformanceMonitor</h2>
-            <p>None</p>
+            <h2>NSPortStaticConfiguration</h2>
+            <p>Represents a network port static configuration in the context of an Network Services Gateway.</p>
         </section>
 
         <section id="overview">
@@ -81,7 +85,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_description" title="Description of application group probe">description</a>
+                            <a href="#attr_address" title="IP address of the Network NSPort.">address</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -111,37 +115,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_interval" title="interval in seconds">interval</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_integer">integer
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_name" title="Name of the application group probe">name</a>
+                            <a href="#attr_DNSAddress" title="DNS Address for Network NSPort.">DNSAddress</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_string">string
@@ -171,10 +145,10 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_numberOfPackets" title="number of packets">numberOfPackets</a>
+                            <a href="#attr_enabled" title="Boolean value that states if the NSG Port static configuration needs to be applied.">enabled</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_integer">integer
+                            <span class="type_boolean">boolean
     
     
     
@@ -189,10 +163,6 @@
     
     
     
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -201,37 +171,7 @@
                     
                     <tr>
                         <td class="fixed-text">
-                            <a href="#attr_payloadSize" title="Payload size">payloadSize</a>
-                        </td>
-                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
-                            <span class="type_integer">integer
-    
-    
-    
-    
-    </span>
-                        </td>
-                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
-                            
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="fixed-text">
-                            <a href="#attr_serviceClass" title="Class of service to be used.  Service classes in order of priority are A, B, C, D, E, F, G, and H.">serviceClass</a>
+                            <a href="#attr_entityScope" title="Specify if scope of entity is Data center or Enterprise level">entityScope</a>
                         </td>
                         <td style="padding-left: 10px;" class="fixed-text hide-xs">
                             <span class="type_enum">enum
@@ -247,19 +187,131 @@
     
     
     
+     (ENTERPRISE | GLOBAL)
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+     <span class="label label-info"> autogenerated </span>&nbsp;
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_externalID" title="External object ID. Used for integration with third party systems">externalID</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
     
     
     
     
     
     
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+     <span class="label label-warning"> locally unique </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_gateway" title="IP address of the gateway bound to the Network NSPort.">gateway</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
     
     
     
     
     
     
-     (A | B | C | D | E | F | G | H)
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_lastUpdatedBy" title="ID of the user who last updated the object.">lastUpdatedBy</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
+    </span>
+                        </td>
+                        <td style="padding-left: 30px;" class="fixed-text hide-xs">
+                            
+    
+    
+    
+    
+    
+     <span class="label label-info"> autogenerated </span>&nbsp;
+    
+    
+    
+    
+    
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="fixed-text">
+                            <a href="#attr_netmask" title="IP address netmask of the Network NSPort.">netmask</a>
+                        </td>
+                        <td style="padding-left: 10px;" class="fixed-text hide-xs">
+                            <span class="type_string">string
+    
+    
+    
+    
     </span>
                         </td>
                         <td style="padding-left: 30px;" class="fixed-text hide-xs">
@@ -296,7 +348,7 @@
         <div class="col-xs-7">
 
             
-            <span class="fixed-text">/performancemonitors/<span class="text-muted">id</span></a>
+            <span class="fixed-text">/nsportstaticconfigurations/<span class="text-muted">id</span></a>
             
         </div>
         <div class="col-xs-5 text-right">
@@ -343,7 +395,29 @@
 
             
             
-            <span class="fixed-text">/<a href="enterprise.html">enterprises</a>/<span class="text-muted">id</span>/performancemonitors</span>
+            <span class="fixed-text">/nsportstaticconfigurations</a>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+            
+            <span class="fixed-text">/<a href="nsport.html">nsports</a>/<span class="text-muted">id</span>/nsportstaticconfigurations</span>
             
 
             
@@ -362,6 +436,13 @@
     
     
     <span class="label label-primary">post</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-success">put</span>
     
             
         </div>
@@ -386,7 +467,7 @@
             
 
             
-            <span class="fixed-text">/performancemonitors/<span class="text-muted">id</span>/<a href="applicationperformancemanagement.html">applicationperformancemanagements</a></span>
+            <span class="fixed-text">/nsportstaticconfigurations/<span class="text-muted">id</span>/<a href="metadata.html">metadatas</a></span>
             
 
             
@@ -400,6 +481,50 @@
     <span class="label label-default">get</span>
     
             
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+        </div>
+    </div>
+    
+    <div class="row bordered-row">
+        <div class="col-xs-7">
+
+            
+
+            
+            <span class="fixed-text">/nsportstaticconfigurations/<span class="text-muted">id</span>/<a href="globalmetadata.html">globalmetadatas</a></span>
+            
+
+            
+        </div>
+        <div class="col-xs-5 text-right">
+            
+            
+    
+    
+    
+    <span class="label label-default">get</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-primary">post</span>
+    
+            
+            
+    
+    
+    
+    <span class="label label-success">put</span>
+    
+            
         </div>
     </div>
     
@@ -410,10 +535,10 @@
         <section id="attributes">
             <h3>Attributes documentation</h3>
             
-            <section id="attr_description" class="filterable" data-filter-keyword="description" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_address" class="filterable" data-filter-keyword="address" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>description</b>
+                        <b>address</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -433,7 +558,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Description of application group probe</p>
+                        <p>IP address of the Network NSPort.</p>
 
                         <hr/>
 
@@ -450,8 +575,6 @@
                             
 
                             
-                            <span class="small"><b>Min lenght: </b></span><span class="fixed-text">1</span><br/>
-                            
 
                             
                             <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
@@ -461,67 +584,16 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">description</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">address</span>
                         </p>
                     </div>
                 </div>
             </section>
             
-            <section id="attr_interval" class="filterable" data-filter-keyword="interval" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_DNSAddress" class="filterable" data-filter-keyword="DNSAddress" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>interval</b>
-                        <span class="type_integer fixed-text">integer</span>
-                        
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>interval in seconds</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">interval</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_name" class="filterable" data-filter-keyword="name" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>name</b>
+                        <b>DNSAddress</b>
                         <span class="type_string fixed-text">string</span>
                         
     
@@ -541,7 +613,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Name of the application group probe</p>
+                        <p>DNS Address for Network NSPort.</p>
 
                         <hr/>
 
@@ -558,8 +630,6 @@
                             
 
                             
-                            <span class="small"><b>Min lenght: </b></span><span class="fixed-text">1</span><br/>
-                            
 
                             
                             <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
@@ -569,17 +639,17 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">name</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">DNSAddress</span>
                         </p>
                     </div>
                 </div>
             </section>
             
-            <section id="attr_numberOfPackets" class="filterable" data-filter-keyword="numberOfPackets" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_enabled" class="filterable" data-filter-keyword="enabled" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>numberOfPackets</b>
-                        <span class="type_integer fixed-text">integer</span>
+                        <b>enabled</b>
+                        <span class="type_boolean fixed-text">boolean</span>
                         
     
     
@@ -587,10 +657,6 @@
     
     
     
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
     
     
     
@@ -598,7 +664,7 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>number of packets</p>
+                        <p>Boolean value that states if the NSG Port static configuration needs to be applied.</p>
 
                         <hr/>
 
@@ -620,67 +686,16 @@
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">numberOfPackets</span>
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">enabled</span>
                         </p>
                     </div>
                 </div>
             </section>
             
-            <section id="attr_payloadSize" class="filterable" data-filter-keyword="payloadSize" style="padding-top: 60px; margin-top: -60px;">
+            <section id="attr_entityScope" class="filterable" data-filter-keyword="entityScope" style="padding-top: 60px; margin-top: -60px;">
                 <div class="panel panel-default">
                     <div class="panel-heading fixed-text">
-                        <b>payloadSize</b>
-                        <span class="type_integer fixed-text">integer</span>
-                        
-    
-    
-    
-    
-    
-    
-     <span class="label label-info"> filterable </span>&nbsp;
-    
-    
-     <span class="label label-info"> orderable </span>&nbsp;
-    
-    
-    
-                    </div>
-
-                    <div class="panel-body">
-                        <h5><b>Discussion</b></h5>
-                        <p>Payload size</p>
-
-                        <hr/>
-
-                        <h5><b>Charateristics</b></h5>
-                        <p>
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            
-
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">payloadSize</span>
-                        </p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="attr_serviceClass" class="filterable" data-filter-keyword="serviceClass" style="padding-top: 60px; margin-top: -60px;">
-                <div class="panel panel-default">
-                    <div class="panel-heading fixed-text">
-                        <b>serviceClass</b>
+                        <b>entityScope</b>
                         <span class="type_enum fixed-text">enum</span>
                         
     
@@ -688,6 +703,8 @@
     
     
     
+     <span class="label label-info"> autogenerated </span>&nbsp;
+    
     
      <span class="label label-info"> filterable </span>&nbsp;
     
@@ -700,14 +717,22 @@
 
                     <div class="panel-body">
                         <h5><b>Discussion</b></h5>
-                        <p>Class of service to be used.  Service classes in order of priority are A, B, C, D, E, F, G, and H.</p>
+                        <p>Specify if scope of entity is Data center or Enterprise level</p>
 
                         <hr/>
 
                         <h5><b>Charateristics</b></h5>
                         <p>
                             
-                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">A, B, C, D, E, F, G, H</span><br/>
+                            <span class="small"><b>Allowed values: </b></span><span class="fixed-text">ENTERPRISE, GLOBAL</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
                             
 
                             
@@ -718,13 +743,225 @@
 
                             
 
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">entityScope</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_externalID" class="filterable" data-filter-keyword="externalID" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>externalID</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+     <span class="label label-warning"> locally unique </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>External object ID. Used for integration with third party systems</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
                             
 
                             
 
                             
 
-                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">serviceClass</span>
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">externalID</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_gateway" class="filterable" data-filter-keyword="gateway" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>gateway</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>IP address of the gateway bound to the Network NSPort.</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">gateway</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_lastUpdatedBy" class="filterable" data-filter-keyword="lastUpdatedBy" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>lastUpdatedBy</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+     <span class="label label-info"> autogenerated </span>&nbsp;
+    
+    
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>ID of the user who last updated the object.</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">lastUpdatedBy</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="attr_netmask" class="filterable" data-filter-keyword="netmask" style="padding-top: 60px; margin-top: -60px;">
+                <div class="panel panel-default">
+                    <div class="panel-heading fixed-text">
+                        <b>netmask</b>
+                        <span class="type_string fixed-text">string</span>
+                        
+    
+    
+    
+    
+    
+    
+     <span class="label label-info"> filterable </span>&nbsp;
+    
+    
+     <span class="label label-info"> orderable </span>&nbsp;
+    
+    
+    
+                    </div>
+
+                    <div class="panel-body">
+                        <h5><b>Discussion</b></h5>
+                        <p>IP address netmask of the Network NSPort.</p>
+
+                        <hr/>
+
+                        <h5><b>Charateristics</b></h5>
+                        <p>
+                            
+
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Format: </b></span><span class="fixed-text">free</span><br/>
+                            
+
+                            
+
+                            
+                            <span class="small"><b>Max lenght: </b></span><span class="fixed-text">255</span><br/>
+                            
+
+                            
+
+                            
+
+                            <span class="small"><b>SDK attribute: </b></span><span class="fixed-text">netmask</span>
                         </p>
                     </div>
                 </div>
